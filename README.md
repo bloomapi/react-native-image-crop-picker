@@ -1,3 +1,12 @@
+# **This branch diverges from the main repo.**
+It's currently locked at `e6829797d9ad0ec6bc2aac0074d5c0803cea419c` except a handful of cherry-picked fixes:
+- `2e24ffef369451c7c98fcaa37a6aa7e46b4e5058` -- Fixes [#699](https://github.com/bloomapi/bloom/issues/699) for us. Basically, it undoes reverting of merging [PR #1090](https://github.com/ivpusic/react-native-image-crop-picker/pull/1090). This PR monkey-pathes the underlying native `QBImagePicker` lib, so it's merging was later reverted to reject this fix from the repo. Maintainers don't seems to care about updating `QBImagePicker`, so, yeah, this commit stays, I guess.
+- `e0f10f3dda5e4673534f71673acd6726ffca3356`, `eb57f75cd736f19bed6afa2a56c94532a871db1c` -- prevent the app from crashing while taking videos if built with XCode 13.
+# RN 0.61 upgrade note:
+Please note, that 0.25.3 is the latest 0.60-compliant release. Consider syncing this fork with it's source (Keeping the above-metioned fix for **#699**) when bumping RN to 0.61.0+.
+
+
+
 # react-native-image-crop-picker
 
 [![Backers on Open Collective](https://opencollective.com/react-native-image-crop-picker/backers/badge.svg)](#backers) [![Sponsors on Open Collective](https://opencollective.com/react-native-image-crop-picker/sponsors/badge.svg)](#sponsors)
